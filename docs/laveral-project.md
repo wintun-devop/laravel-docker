@@ -23,3 +23,19 @@ php -i | findstr "openssl.cafile"
 ```
 composer create-project laravel/laravel ApisServer
 ```
+
+### Route and Controller
+- health check controller
+```
+php artisan make:controller HealthCheckController
+```
+- health check route ./routes/health.php 
+```
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/health', function () {
+    return response()->json(['status' => 'Api is working ok!']);
+});
+```
