@@ -39,3 +39,16 @@ Route::get('/health', function () {
     return response()->json(['status' => 'Api is working ok!']);
 });
 ```
+
+### Route Check
+```
+php artisan route:list --path=api/health
+```
+
+### ItemController
+```
+php artisan make:controller ItemController
+```
+```
+php artisan route:list --path=api/items
+```
